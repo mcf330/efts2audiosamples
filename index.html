@@ -1,0 +1,460 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Audio samples from "EfficientTTS 2: Variational End-to-End Text-to-Speech Synthesis and Voice Conversion"</title>
+    <meta charset="UTF-8">
+    <title>EfficientTTS: An Efficient and High-Quality Text-to-Speech Architecture</title>
+    <style>
+        red {color: red}
+        audio {width: 250px}
+    </style>
+  </head>
+  <body>
+    <article>
+      <header>
+        <h1>Audio samples from "EfficientTTS 2: Variational End-to-End Text-to-Speech Synthesis and Voice Conversion"</h1>
+      </header>
+    </article>
+
+
+    <div>
+      <b>Abstract:</b>
+       Recently, the field of Text-to-Speech (TTS) has been dominated by one-stage text-to-waveform models which have significantly improved speech quality compared to two-stage models. In this work, we propose EfficientTTS 2 (EFTS2), a one-stage high-quality end-to-end TTS framework that is fully differentiable and highly efficient. Our method adopts an adversarial training process, with a differentiable aligner and a hierarchical-VAE-based waveform generator. These design choices free the model from the use of external aligners, invertible structures, and complex training procedures as most previous TTS works have. Moreover, we extend EFTS2 to the voice conversion (VC) task and propose EFTS2-VC, an end-to-end VC model that allows high-quality speech-to-speech conversion. Experimental results suggest that the two proposed models achieve better or at least comparable speech quality compared to baseline models, while also providing faster inference speeds and smaller model sizes.
+    <p></p>
+    </div>
+
+
+    <b>Contents:</b>
+    <div id="toc_container">
+    <ul>
+      <li><a href="#lj">TTS on LJ Speech Dataset</a></li>
+      <li><a href="#MutiSpeaker1">Muti-speaker results on VCTK</a></li>
+      <li><a href="#MutiSpeaker2">Muti-speaker results on LibriTTS</a></li>
+      <li><a href="#div">Speech Diversity</a></li>
+      <li><a href="#vc">VC on VCTK Dataset</a></li>
+    </ul>
+    </div>
+    <div>
+        <a name="lj"><h2>TTS on LJ Speech Dataset</h2></a>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                <th>Ground-Truth</th><th> EFTS2 </th><th> VITS</th>
+                </tr>
+              </thead>
+          <tbody>
+          <tr>
+             <td colspan="5"><span>1: refuted by abundant evidence, and having no foundation whatever in truth.</span></td>
+          </tr>
+          <tr>
+            <td><audio controls="" preload="none"><source src="audios/tts/gt/LJ005-0019.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/tts/efts/LJ005-0019.wav"></audio></td>           
+            <td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ005-0019.wav"></audio></td>
+          </tr>
+          <tr>
+              <td colspan="5"><span>2: the same callous indifference to the moral well-being of the prisoners, the same want of employment and of all disciplinary control.</span></td>
+           </tr>
+           <tr>
+            <td><audio controls="" preload="none"><source src="audios/tts/gt/LJ006-0044.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/tts/efts/LJ006-0044.wav"></audio></td>           
+            <td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ006-0044.wav"></audio></td>
+          </tr>
+          <tr>
+            <td colspan="5"><span>3: The news-vendor was also a tobacconist,</span></td>
+         </tr>
+         <tr>
+          <td><audio controls="" preload="none"><source src="audios/tts/gt/LJ006-0202.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/tts/efts/LJ006-0202.wav"></audio></td>           
+          <td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ006-0202.wav"></audio></td>
+        </tr>
+        <tr>
+          <td colspan="5"><span>4: as effectually to rebuke and abash the profane spirit of the more insolent and daring of the criminals.</span></td>
+       </tr>
+       <tr>
+        <td><audio controls="" preload="none"><source src="audios/tts/gt/LJ007-0075.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/tts/efts/LJ007-0075.wav"></audio></td>           
+        <td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ007-0075.wav"></audio></td>
+      </tr>
+      <tr>
+        <td colspan="5"><span>5: One was the "yeoman of the halter," a Newgate official, the executioner's assistant, whom Mr. J. T. Smith, who was present at the execution,</span></td>
+     </tr>
+     <tr>
+      <td><audio controls="" preload="none"><source src="audios/tts/gt/LJ008-0098.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/efts/LJ008-0098.wav"></audio></td>           
+      <td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ008-0098.wav"></audio></td>
+    </tr>
+    <tr>
+      <td colspan="5"><span>6: and caused a number of stout additional barriers to be erected in front of the scaffold,</span></td>
+   </tr>
+   <tr>
+    <td><audio controls="" preload="none"><source src="audios/tts/gt/LJ008-0206.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/tts/efts/LJ008-0206.wav"></audio></td>           
+    <td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ008-0206.wav"></audio></td>
+  </tr>
+    <tr>
+      <td colspan="5"><span>7: occupied when they saw it last, but a few hours ago, by their comrades who are now dead;</span></td>
+   </tr>
+   <tr>
+    <td><audio controls="" preload="none"><source src="audios/tts/gt/LJ009-0124.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/tts/efts/LJ009-0124.wav"></audio></td>           
+    <td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ009-0124.wav"></audio></td>
+  </tr>
+  <tr>
+    <td colspan="5"><span>8: Nor did the methods by which they were perpetrated greatly vary from those in times past.</span></td>
+ </tr>
+ <tr>
+  <td><audio controls="" preload="none"><source src="audios/tts/gt/LJ010-0027.wav"></audio></td>
+  <td><audio controls="" preload="none"><source src="audios/tts/efts/LJ010-0027.wav"></audio></td>           
+  <td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ010-0027.wav"></audio></td>
+</tr>
+<tr>
+  <td colspan="5"><span>9: Weedon and Lecasser to twelve and six months respectively in Coldbath Fields.</span></td>
+</tr>
+<tr>
+<td><audio controls="" preload="none"><source src="audios/tts/gt/LJ012-0015.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/tts/efts/LJ012-0015.wav"></audio></td>           
+<td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ012-0015.wav"></audio></td>
+</tr>
+<tr>
+  <td colspan="5"><span>10: The jury did not believe him, and the verdict was for the defendants.</span></td>
+</tr>
+<tr>
+<td><audio controls="" preload="none"><source src="audios/tts/gt/LJ013-0055.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/tts/efts/LJ013-0055.wav"></audio></td>           
+<td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ013-0055.wav"></audio></td>
+</tr>
+<tr>
+  <td colspan="5"><span>11: The prisoners were in due course transferred to Newgate, to be put upon their trial at the Central Criminal Court.</span></td>
+</tr>
+<tr>
+<td><audio controls="" preload="none"><source src="audios/tts/gt/LJ014-0121.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/tts/efts/LJ014-0121.wav"></audio></td>           
+<td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ014-0121.wav"></audio></td>
+</tr>
+<tr>
+  <td colspan="5"><span>12: I will briefly describe one or two of the more remarkable murders in the years immediately following, then pass on to another branch of crime.</span></td>
+</tr>
+<tr>
+<td><audio controls="" preload="none"><source src="audios/tts/gt/LJ014-0171.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/tts/efts/LJ014-0171.wav"></audio></td>           
+<td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ014-0171.wav"></audio></td>
+</tr>
+<tr>
+  <td colspan="5"><span>13: The bank enjoyed an excellent reputation, it had a good connection, and was supposed to be perfectly sound.</span></td>
+</tr>
+<tr>
+<td><audio controls="" preload="none"><source src="audios/tts/gt/LJ015-0025.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/tts/efts/LJ015-0025.wav"></audio></td>           
+<td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ015-0025.wav"></audio></td>
+</tr>
+<tr>
+  <td colspan="5"><span>14: who was presently attacked in the same way as the others, but, but, thanks to the prompt administration of remedies, he recovered.</span></td>
+</tr>
+<tr>
+<td><audio controls="" preload="none"><source src="audios/tts/gt/LJ017-0189.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/tts/efts/LJ017-0189.wav"></audio></td>           
+<td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ017-0189.wav"></audio></td>
+</tr>
+<tr>
+  <td colspan="5"><span>15: Break apart from one another and pile on a plate, throwing a clean doily or a small napkin over them. Break open at table.</span></td>
+</tr>
+<tr>
+<td><audio controls="" preload="none"><source src="audios/tts/gt/LJ020-0085.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/tts/efts/LJ020-0085.wav"></audio></td>           
+<td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ020-0085.wav"></audio></td>
+</tr>
+<tr>
+  <td colspan="5"><span>16: with respect to industry and business, but nearly all are agreed that private enterprise in times such as these</span></td>
+</tr>
+<tr>
+<td><audio controls="" preload="none"><source src="audios/tts/gt/LJ021-0012.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/tts/efts/LJ021-0012.wav"></audio></td>           
+<td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ021-0012.wav"></audio></td>
+</tr>
+<tr>
+  <td colspan="5"><span>17: In nineteen thirty-three you and I knew that we must never let our economic system get completely out of joint again</span></td>
+</tr>
+<tr>
+<td><audio controls="" preload="none"><source src="audios/tts/gt/LJ023-0016.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/tts/efts/LJ023-0016.wav"></audio></td>           
+<td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ023-0016.wav"></audio></td>
+</tr>
+<tr>
+  <td colspan="5"><span>18: Under these circumstances, unnatural as they are, with proper management, the bean will thrust forth its radicle and its plumule;</span></td>
+</tr>
+<tr>
+<td><audio controls="" preload="none"><source src="audios/tts/gt/LJ025-0157.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/tts/efts/LJ025-0157.wav"></audio></td>           
+<td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ025-0157.wav"></audio></td>
+</tr>
+<tr>
+  <td colspan="5"><span>19: These were undoubtedly perennibranchs. In the Permian and Triassic higher forms appeared, which were certainly caducibranch.</span></td>
+</tr>
+<tr>
+<td><audio controls="" preload="none"><source src="audios/tts/gt/LJ027-0178.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/tts/efts/LJ027-0178.wav"></audio></td>           
+<td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ027-0178.wav"></audio></td>
+</tr>
+<tr>
+  <td colspan="5"><span>20: They took off in the Presidential plane, Air Force One, at eleven a.m., arriving at San Antonio at one:thirty p.m., Eastern Standard Time.</span></td>
+</tr>
+<tr>
+<td><audio controls="" preload="none"><source src="audios/tts/gt/LJ030-0006.wav"></audio></td>
+<td><audio controls="" preload="none"><source src="audios/tts/efts/LJ030-0006.wav"></audio></td>           
+<td><audio controls="" preload="none"><source src="audios/tts/vits/id_LJ030-0006.wav"></audio></td>
+</tr>     
+          </tbody>
+        </table>
+        <hr>
+
+      </div>
+      <br><br>
+
+    <div>
+      <a name="MutiSpeaker1"><h2>Muti-speaker results on VCTK</h2></a>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                <th>EFTS2</th><th> VITS</th>
+                </tr>
+              </thead>
+          <tbody>
+            <tr>
+              <td colspan="2"><span>1: When the sunlight strikes raindrops in the air, they act as a prism and form a rainbow.</span></td>
+           </tr>
+            <tr>
+              <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/vctk/efts2/20_p266_006.wav"></audio></td>
+              <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/vctk/vits/20_p266_006.wav"></audio></td>
+            </tr>
+            <tr>
+              <td colspan="2"><span>2: When a man looks for something beyond his reach, his friends say he's looking for the pot of gold at the end of the rainbow.</span></td>
+           </tr>
+            <tr>
+              <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/vctk/efts2/30_p302_011.wav"></audio></td>
+              <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/vctk/vits/30_p302_011.wav"></audio></td>
+            </tr>
+            <tr>
+              <td colspan="2"><span>3: However, the intensive care unit at the Southern General Hospital was full.</span></td>
+           </tr>
+            <tr>
+              <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/vctk/efts2/57_p228_109.wav"></audio></td>
+              <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/vctk/vits/57_p228_109.wav"></audio></td>
+            </tr>
+            <tr>
+              <td colspan="2"><span>4: John Reid, the Northern Ireland secretary, yesterday appealed for restraint.</span></td>
+           </tr>
+            <tr>
+              <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/vctk/efts2/66_p341_082.wav"></audio></td>
+              <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/vctk/vits/66_p341_082.wav"></audio></td>
+            </tr>
+            <tr>
+              <td colspan="2"><span>5: To the Hebrews it was a token that there would be no more universal floods.</span></td>
+           </tr>
+            <tr>
+              <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/vctk/efts2/89_p277_014.wav"></audio></td>
+              <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/vctk/vits/89_p277_014.wav"></audio></td>
+            </tr>
+        </table>
+      </div>
+  <br><br>
+
+  <div>
+    <a name="MutiSpeaker2"><h2>Muti-speaker results on LibriTTS</h2></a>
+      <hr>
+      <table>
+          <thead>
+              <tr>
+              <th>EFTS2</th><th> VITS</th>
+              </tr>
+            </thead>
+        <tbody>
+          <tr>
+            <td colspan="2"><span>1: You never can let well enough alone, but want to be forever on the move.</span></td>
+         </tr>
+          <tr>
+            <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/libritts/efts2/22_1578_140049_000003_000002.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/libritts/vits/22_1578_140049_000003_000002.wav"></audio></td>
+          </tr>
+          <tr>
+            <td colspan="2"><span>2: Who told you that you could act like this?</span></td>
+         </tr>
+          <tr>
+            <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/libritts/efts2/35_1970_28415_000025_000001.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/libritts/vits/35_1970_28415_000025_000001.wav"></audio></td>
+          </tr>
+          <tr>
+            <td colspan="2"><span>3: john always speaks as if I fancied I was ill, and I am sure I never do fancy any such thing.</span></td>
+         </tr>
+          <tr>
+            <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/libritts/efts2/57_250_142286_000027_000000.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/libritts/vits/57_250_142286_000027_000000.wav"></audio></td>
+          </tr>
+          <tr>
+            <td colspan="2"><span>4: When something more fiery is needed we can twirl the flecks of pure gold in a chalice of Eau de Vie de Danzig and nibble on legitimate Danzig cheese unadulterated</span></td>
+         </tr>
+          <tr>
+            <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/libritts/efts2/71_2911_12359_000017_000001.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/libritts/vits/71_2911_12359_000017_000001.wav"></audio></td>
+          </tr>
+          <tr>
+            <td colspan="2"><span>5: He rushed forward, with eyes glaring like a tiger's, and leveled a blow at Maximilian.</span></td>
+         </tr>
+          <tr>
+            <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/libritts/efts2/164_6019_3185_000030_000004.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/tts/muti-speaker/libritts/vits/164_6019_3185_000030_000004.wav"></audio></td>
+          </tr>
+      </table>
+    </div>
+<br><br>
+
+
+    <div>
+      <a name="div"><h2>Speech Diversity</h2></a>      
+      <hr>
+     
+      <tr>
+        <td colspan="5"><span>   <b>Different values of scaling factors on the variance of the VAE priors:</b> </span></td>
+     </tr>
+
+    <table>
+
+    <tbody>
+      <tr>
+        <td colspan="5"><span>Audios from EFTS2 with scaling factors: t<sub>A</sub>=0, t<sub>1</sub>=0.0, t<sub>2</sub>=0.8. </span></td>
+     </tr>
+    <tr>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0_T1_0_T2_0.8/LJ016-0117_sample_0.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0_T1_0_T2_0.8/LJ016-0117_sample_1.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0_T1_0_T2_0.8/LJ016-0117_sample_2.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0_T1_0_T2_0.8/LJ016-0117_sample_3.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0_T1_0_T2_0.8/LJ016-0117_sample_4.wav"></audio></td>
+    </tr>
+      <tr>
+        <td colspan="5"><span>Audios from EFTS2 with scaling factors: t<sub>A</sub>=0, t<sub>1</sub>=1.0, t<sub>2</sub>=0.8. </span></td>
+     </tr>
+    <tr>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0_T1_1.0_T2_0.8/LJ016-0117_sample_0.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0_T1_1.0_T2_0.8/LJ016-0117_sample_1.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0_T1_1.0_T2_0.8/LJ016-0117_sample_2.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0_T1_1.0_T2_0.8/LJ016-0117_sample_3.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0_T1_1.0_T2_0.8/LJ016-0117_sample_4.wav"></audio></td>
+    </tr>     
+    <tr>
+      <td colspan="5"><span>Audios from EFTS2 with scaling factors: t<sub>A</sub>=0.7, t<sub>1</sub>=0.8, t<sub>2</sub>=0.2. </span></td>
+   </tr>
+     <tr>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0.7_T1_0.8_T2_0.2/LJ016-0117_sample_0.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0.7_T1_0.8_T2_0.2/LJ016-0117_sample_1.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0.7_T1_0.8_T2_0.2/LJ016-0117_sample_2.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0.7_T1_0.8_T2_0.2/LJ016-0117_sample_3.wav"></audio></td>
+      <td><audio controls="" preload="none"><source src="audios/tts/div/TA_0.7_T1_0.8_T2_0.2/LJ016-0117_sample_4.wav"></audio></td>
+      </tr>
+    
+      </tbody>
+    </table>
+
+    <tr>
+      <td colspan="5"><span>   <b>Speech rate control:</b> EFTS2 is also capable of producing audio samples of different speech rate by multiplying a scaling factor on the predicted alignment. The following audios are produced by multiplying different scaling factors <b>s</b>.  </span></td>
+   </tr>
+
+  <table>
+
+      <tbody>
+      
+     <thead>
+      <tr>
+      <th> s=0.8 </th><th> s=0.9 </th><th>  s=1.0 </th><th>  s=1.1 </th><th>  s=1.2 </th>
+      </tr>
+    </thead>
+      <tr>
+        <td><audio controls="" preload="none"><source src="audios/tts/div/speech rate/LJ016-0117_sample_0.8.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/tts/div/speech rate/LJ016-0117_sample_0.9.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/tts/div/speech rate/LJ016-0117_sample_1.0.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/tts/div/speech rate/LJ016-0117_sample_1.1.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/tts/div/speech rate/LJ016-0117_sample_1.2.wav"></audio></td>
+        </tr>
+    </tbody>
+
+  </table>
+</div>
+
+
+<br><br>
+
+  <div>
+    <a name="vc"><h2>VC on VCTK Dataset</h2></a>
+    <hr>
+    <tr>
+      <td colspan="2">Audio samples from seen speakers.</td>
+   </tr>
+    <table>
+        <thead>
+            <tr>
+            <th> Source Wav </th><th> Target Wav</th><th>  Conversion </th>
+            </tr>
+          </thead>
+      <tbody>
+      <tr>
+        <td><audio controls="" preload="none"><source src="audios/vc/src/0.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/vc/tgt/0.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/vc/convert/0.wav"></audio></td>
+      </tr>
+       <tr>
+        <td><audio controls="" preload="none"><source src="audios/vc/src/1.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/vc/tgt/1.wav"></audio></td>
+        <td><audio controls="" preload="none"><source src="audios/vc/convert/1.wav"></audio></td>
+        </tr>
+        <tr>
+          <td><audio controls="" preload="none"><source src="audios/vc/src/2.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/vc/tgt/2.wav"></audio></td>
+          <td><audio controls="" preload="none"><source src="audios/vc/convert/2.wav"></audio></td>
+          </tr>
+          <tr>
+            <td><audio controls="" preload="none"><source src="audios/vc/src/3.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/vc/tgt/3.wav"></audio></td>
+            <td><audio controls="" preload="none"><source src="audios/vc/convert/3.wav"></audio></td>
+            </tr>
+            <tr>
+              <td><audio controls="" preload="none"><source src="audios/vc/src/4.wav"></audio></td>
+              <td><audio controls="" preload="none"><source src="audios/vc/tgt/4.wav"></audio></td>
+              <td><audio controls="" preload="none"><source src="audios/vc/convert/4.wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio controls="" preload="none"><source src="audios/vc/src/5.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="audios/vc/tgt/5.wav"></audio></td>
+                <td><audio controls="" preload="none"><source src="audios/vc/convert/5.wav"></audio></td>
+              </tr>
+      </tbody>
+    </table>
+    <hr>
+    <tr>
+      <td colspan="2">Audio samples from unseen speakers.</td>
+   </tr>
+   <table>
+    <thead>
+        <tr>
+        <th> Source Wav </th><th> Target Wav</th><th>  Conversion </th>
+        </tr>
+      </thead>
+  <tbody>
+  <tr>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/65_src_64_generated.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/65_tgt_96_generated.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/65_64_96_generated.wav"></audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/61_src_34_generated.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/61_tgt_16_generated.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/61_34_16_generated.wav"></audio></td>
+  </tr>
+  <tr>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/75_src_43_generated.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/75_tgt_4_generated.wav"></audio></td>
+    <td><audio controls="" preload="none"><source src="audios/vc/unseen/75_43_4_generated.wav"></audio></td>
+  </tr>
+  </tbody>
+</table>
+  </div>
+
+</body></html>
